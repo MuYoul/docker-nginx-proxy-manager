@@ -43,8 +43,9 @@ jobs:
       run: |
         docker build . \
           --file Dockerfile \
-          --tag lemy0715/nginx-proxy-manager:$(date +%s)
-          --tag lemy0715/nginx-proxy-manager:latest
+          --tag lemy0715/nginx-proxy-manager:$(date +%s) \
+          --tag lemy0715/nginx-proxy-manager:latest \
+          --platform linux/amd64,linux/arm/v7,linux/arm64
 
 # steps:
 #       - name: checkout code
